@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "poppins-l";
+  src: local("poppins-l"), url(./fonts/Poppins-Light.ttf) format(truetype);
+}
+
+@font-face {
+  font-family: "poppins-m";
+  src: local("poppins-m"), url(./fonts/Poppins-Medium.ttf) format(truetype);
+}
+
+@font-face {
+  font-family: "poppins-r";
+  src: local("poppins-r"), url(./fonts/Poppins-Regular.ttf) format(truetype);
+}
+
+@font-face {
+  font-family: "poppins-b";
+  src: local("poppins-b"), url(./fonts/Poppins-Bold.ttf) format(truetype);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "poppins-r", "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: rgb(242, 242, 242);
+  background-color: rgb(40, 89, 75);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
