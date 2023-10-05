@@ -4,6 +4,7 @@ import About from "../components/about/AboutSection";
 import WorkSection from "../components/work/WorkSection";
 import ContactSection from "../components/contact/ContactSection";
 import Navigation from "../components/navigation/Navigation";
+import { StyleSheetManager } from "styled-components";
 
 function Portfolio() {
   const [isSticky, setIsSticky] = useState(false);
@@ -23,13 +24,13 @@ function Portfolio() {
   }, []);
 
   return (
-    <>
+    <StyleSheetManager shouldForwardProp={(prop) => !["sticky"].includes(prop)}>
       <VideoPlayer />
       <Navigation sticky={isSticky} />
       <About />
       <WorkSection />
       <ContactSection />
-    </>
+    </StyleSheetManager>
   );
 }
 

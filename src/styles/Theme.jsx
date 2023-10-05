@@ -2,11 +2,9 @@ import { ThemeProvider } from "styled-components";
 
 const theme = {
   color: {
-    c1: "#684073;",
-    c2: "#28594B;",
-    c3: "#594A1D;",
-    c4: "#73612C;",
-    c5: "#F2F2F2;",
+    c1: "#E0C251",
+    c2: "#111111;",
+    c3: "#f2f2f2;",
   },
   media: {
     mobile: `@media (max-width: 768px)`,
@@ -19,6 +17,7 @@ const theme = {
     s2: "2rem;",
     s3: "3rem;",
     s4: "4rem;",
+    s15: "1.5rem;",
   },
   headersize: {
     h1: "4rem;",

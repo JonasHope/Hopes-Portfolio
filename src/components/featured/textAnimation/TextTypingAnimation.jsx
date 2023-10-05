@@ -3,40 +3,54 @@ import styled from "styled-components";
 
 const ContentContainer = styled.div`
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: ${(props) => props.theme.color.c5};
+  color: ${(props) => props.theme.color.c3};
+  width: 500px;
+  height: 300px;
+  text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+
+  ${(props) => props.theme.media.mobile} {
+    width: 300px;
+  }
 `;
 
 const Heading = styled.h1`
-  font-size: 3rem;
+  font-size: ${(props) => props.theme.fontsize.s4};
   margin-bottom: 20px;
   font-family: poppins-b;
   color: transparent;
-  -webkit-text-stroke: 1px ${(props) => props.theme.color.c5};
-  text-stroke: 1px ${(props) => props.theme.color.c5};
+  -webkit-text-stroke: 1px ${(props) => props.theme.color.c3};
+  text-stroke: 1px ${(props) => props.theme.color.c3};
   background-clip: text;
   background-color: transparent;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  ${(props) => props.theme.media.mobile} {
+    font-size: ${(props) => props.theme.fontsize.s2};
+  }
 `;
 
 const HelloMsg = styled.span`
-  margin-bottom: -30px;
-`;
-
-const Name = styled.span`
-  color: ${(props) => props.theme.color.c5};
-  font-family: poppins-r;
-  font-size: 4rem;
   margin-bottom: -25px;
 `;
 
+const Name = styled.span`
+  color: ${(props) => props.theme.color.c3};
+  font-family: poppins-r;
+  font-size: ${(props) => props.theme.fontsize.s5};
+  margin-bottom: -25px;
+  ${(props) => props.theme.media.mobile} {
+    font-size: ${(props) => props.theme.fontsize.s3};
+  }
+`;
+
 const Intro = styled.p`
-  max-width: 400px;
   text-align: start;
+  font-size: ${(props) => props.theme.fontsize.s15};
 `;
 
 const DeveloperMsg = styled.span`

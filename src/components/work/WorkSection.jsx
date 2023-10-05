@@ -3,8 +3,7 @@ import styled from "styled-components";
 import ContentWidth from "../../styles/ContentWidth";
 
 const WorkContainer = styled.div`
-  height: 100vh;
-  background-color: ${(props) => props.theme.color.c4};
+  min-height: 100vh;
 `;
 
 const WorkHeader = styled.h2`

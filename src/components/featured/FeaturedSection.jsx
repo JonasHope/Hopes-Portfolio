@@ -1,5 +1,5 @@
 import React from "react";
-import featuredVideo from "../../video/vid2.mp4";
+import featuredVideo from "../../video/vid10.mp4";
 import TextTypingAnimation from "./textAnimation/TextTypingAnimation";
 import styled from "styled-components";
 

@@ -3,8 +3,7 @@ import styled from "styled-components";
 import ContentWidth from "../../styles/ContentWidth";
 
 const ContactContainer = styled.div`
-  height: 100vh;
-  background-color: ${(props) => props.theme.color.c1};
+  min-height: 100vh;
 `;
 
 const ContactHeader = styled.h2`
