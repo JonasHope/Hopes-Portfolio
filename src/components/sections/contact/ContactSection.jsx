@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import ContentWidth from "../../styles/ContentWidth";
+import ContentWidth from "../../../styles/ContentWidth";
 
 const ContactContainer = styled.div`
   min-height: 100vh;
@@ -12,7 +12,7 @@ const ContactHeader = styled.h2`
 
 function ContactSection() {
   return (
-    <ContactContainer>
+    <ContactContainer id="contact-section">
       <ContentWidth>
         <ContactHeader>Contact</ContactHeader>
       </ContentWidth>

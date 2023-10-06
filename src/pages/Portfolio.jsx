@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import VideoPlayer from "../components/featured/FeaturedSection";
-import About from "../components/about/AboutSection";
-import WorkSection from "../components/work/WorkSection";
-import ContactSection from "../components/contact/ContactSection";
+import About from "../components/sections/about/AboutSection";
+import WorkSection from "../components/sections/work/WorkSection";
+import ContactSection from "../components/sections/contact/ContactSection";
 import Navigation from "../components/navigation/Navigation";
 import { StyleSheetManager } from "styled-components";
 
