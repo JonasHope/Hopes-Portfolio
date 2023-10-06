@@ -27,10 +27,9 @@ const NavigationContainer = styled.nav`
 `;
 
 const NavItems = styled.div`
-  max-width: 1040px;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 `;
 

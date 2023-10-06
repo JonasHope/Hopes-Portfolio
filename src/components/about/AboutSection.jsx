@@ -1,14 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import me from "../../images/imageofme.jpg";
-import { Link } from "react-router-dom";
 
 const AboutContainer = styled.div`
   min-height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1040px;
+  max-width: 1240px;
   margin: 30px auto;
   padding: 10px 15px;
 
@@ -22,7 +21,6 @@ const AboutHeader = styled.div`
   max-width: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
   letter-spacing: 2px;
 `;
 
@@ -33,7 +31,7 @@ const AboutH2 = styled.h2`
 
 const ImageContainer = styled.div`
   background-image: url(${me});
-  width: 50%;
+  width: 40%;
   height: 70vh;
   background-repeat: no-repeat, no-repeat;
   background-position: center;
@@ -47,16 +45,26 @@ const ImageContainer = styled.div`
   }
 `;
 
-const AboutText = styled.p`
+const AboutMainText = styled.p`
   line-height: 2;
 `;
 
-const StyledLink = styled(Link)`
+const AboutExpandedText = styled.p`
+  line-height: 2;
+  max-height: ${({ expanded }) => (expanded ? "100%" : "0px")};
+  opacity: ${({ expanded }) => (expanded ? 1 : 0)};
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+`;
+
+const ReadMoreButton = styled.p`
   color: ${(props) => props.theme.color.c3};
   text-decoration: none;
   padding: 20px 30px;
   border: 1px solid ${(props) => props.theme.color.c1};
   width: fit-content;
+  cursor: pointer;
+  font-weight: bold;
 
   &:hover {
     background-color: ${(props) => props.theme.color.c1};
@@ -65,19 +73,43 @@ const StyledLink = styled(Link)`
 `;
 
 function About() {
+  const [expanded, setExpanded] = useState(false);
+
+  const toggleText = () => {
+    setExpanded(!expanded);
+  };
+
   return (
     <AboutContainer>
       <ImageContainer></ImageContainer>
       <AboutHeader>
         <AboutH2>About me</AboutH2>
-        <AboutText>
+        <AboutMainText>
           Hello, I'm Jonas Hope, a dedicated Norwegian Frontend Developer with a
           relentless passion for crafting exceptional digital experiences. I am
           driven by a thirst for knowledge, constantly seeking opportunities to
           expand my skill set and stay at the forefront of web development
           trends.
-        </AboutText>
-        <StyledLink>Read more</StyledLink>
+        </AboutMainText>
+        <AboutExpandedText expanded={expanded}>
+          My commitment to excellence means that I push myself to deliver
+          nothing less than perfection. I thrive on turning creative ideas into
+          elegant, user-friendly websites and applications that leave a lasting
+          impact.
+          <br />
+          <br />
+          As a frontend developer, I bring both creativity and precision to the
+          table, ensuring that every project I undertake achieves its full
+          potential. With a keen eye for detail and a love for clean, responsive
+          design, I am committed to delivering results that not only meet but
+          exceed expectations.
+          <br />
+          <br />I look forward to collaborating with you to bring your digital
+          vision to life. Let's create something extraordinary together.
+        </AboutExpandedText>
+        <ReadMoreButton onClick={toggleText}>
+          {expanded ? "Read less" : "Read more"}
+        </ReadMoreButton>
       </AboutHeader>
     </AboutContainer>
   );
