@@ -68,7 +68,7 @@ function TextTypingAnimation() {
   const developerMsgText = "Web Developer";
   const introText =
     "Driven by innovation, creating intuitive web solutions with a focus on user experience and modern technologies.";
-  const typingSpeed = 40;
+  const typingSpeed = 10;
 
   useEffect(() => {
     const animateText = (text, setTextState) => {
