@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled, { StyleSheetManager } from "styled-components";
 import { Link } from "react-router-dom";
 import Modal from "./modal/Modal";
+import FlipCard from "./FlipCard/FlipCard";
 
 const ProjectCardsContainer = styled.div`
   display: flex;
@@ -18,6 +19,10 @@ const ProjectCard = styled.div`
   padding: 20px;
   width: fit-content;
   margin: 10px;
+  perspective: 1000px;
+
+  &:hover {
+  }
 `;
 
 const CardHeader = styled.h3`
@@ -33,10 +38,7 @@ const CardImg = styled.div`
   background-position: center;
   background-size: cover;
   border-radius: 5px;
-`;
-
-const CardDescription = styled.p`
-  width: 300px;
+  cursor: pointer;
 `;
 
 const LanguageIcons = styled.div`
@@ -47,16 +49,14 @@ const LanguageIcons = styled.div`
   }
 `;
 
-const WebLinkContainer = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-`;
+const WebLinkContainer = styled.div``;
 
 const WebLink = styled(Link)`
   color: ${(props) => props.theme.color.c3};
   font-size: ${(props) => props.theme.fontsize.s1};
   letter-spacing: 2px;
   text-decoration: none;
+  margin: 0 10px;
   border-bottom: 2px solid ${(props) => props.theme.color.c3};
 
   &:hover {
@@ -179,38 +179,44 @@ function ProjectCards() {
       <ProjectCardsContainer>
         {cardData.map((card, index) => (
           <ProjectCard key={index}>
-            <CardHeader>{card.name}</CardHeader>
-            <CardImg
-              imageUrl={card.imageUrl}
-              alt={card.altText}
-              onClick={() => openModal(card.imageUrl)}
+            <FlipCard
+              frontContent={
+                <>
+                  <CardHeader>{card.name}</CardHeader>
+                  <CardImg
+                    imageUrl={card.imageUrl}
+                    alt={card.altText}
+                    onClick={() => openModal(card.imageUrl)}
+                  />
+                  <LanguageIcons>
+                    {card.languages.map((iconClass, index) => (
+                      <i
+                        key={index}
+                        className={iconClass}
+                        title={iconMapping[iconClass]}
+                      ></i>
+                    ))}
+                  </LanguageIcons>
+                  <WebLinkContainer>
+                    <WebLink
+                      to={card.siteLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Visit Site
+                    </WebLink>
+                    <WebLink
+                      to={card.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Github
+                    </WebLink>
+                  </WebLinkContainer>
+                </>
+              }
+              backContent={card.description}
             />
-            <LanguageIcons>
-              {card.languages.map((iconClass, index) => (
-                <i
-                  key={index}
-                  className={iconClass}
-                  title={iconMapping[iconClass]}
-                ></i>
-              ))}
-            </LanguageIcons>
-            <CardDescription>{card.description}</CardDescription>
-            <WebLinkContainer>
-              <WebLink
-                to={card.siteLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Visit Site
-              </WebLink>
-              <WebLink
-                to={card.githubLink}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Github
-              </WebLink>
-            </WebLinkContainer>
           </ProjectCard>
         ))}
       </ProjectCardsContainer>
