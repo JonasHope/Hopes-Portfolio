@@ -7,8 +7,9 @@ const Div = styled.div`
   align-items: center;
   justify-content: center;
   max-width: 1240px;
-  margin: 10vh auto;
-  padding: 10vh 15px;
+  margin: 5vh auto;
+  padding: 5vh 15px;
+  min-height: 100vh;
 `;
 
 const AboutContainer = styled.div`
@@ -120,7 +121,7 @@ function About() {
               together.
             </AboutExpandedText>
             <ReadMoreButton onClick={toggleText}>
-              {expanded ? "Read less" : "Read more"}
+              {expanded ? "Show less" : "Read more"}
             </ReadMoreButton>
           </AboutHeader>
         </AboutContainer>

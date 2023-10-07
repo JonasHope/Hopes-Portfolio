@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import VideoPlayer from "../components/featured/FeaturedSection";
+import VideoPlayer from "../components/sections/landing/FeaturedSection";
 import About from "../components/sections/about/AboutSection";
 import WorkSection from "../components/sections/work/WorkSection";
 import ContactSection from "../components/sections/contact/ContactSection";

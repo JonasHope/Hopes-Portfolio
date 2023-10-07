@@ -18,6 +18,7 @@ const theme = {
     s3: "3rem;",
     s4: "4rem;",
     s15: "1.5rem;",
+    s25: "2.5;",
   },
   headersize: {
     h1: "4rem;",

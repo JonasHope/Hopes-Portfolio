@@ -1,6 +1,6 @@
 import React from "react";
-import featuredVideo from "../../video/vid10.mp4";
-import TextTypingAnimation from "./textAnimation/TextTypingAnimation";
+import featuredVideo from "../../../video/vid10.mp4";
+import TextTypingAnimation from "./textanimation/TextTypingAnimation";
 import styled from "styled-components";
 
 const BackgroundVideoContainer = styled.div`

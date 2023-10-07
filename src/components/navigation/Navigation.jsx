@@ -7,7 +7,7 @@ const NavigationContainer = styled.nav`
   top: ${(props) => (props.sticky ? "0" : "auto")};
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  color: ${(props) => props.theme.color.c5};
+  color: ${(props) => props.theme.color.c3};
   perspective: 1000px;
   z-index: 100;
   box-shadow: 0px 0px 3px rgb(242, 242, 242);
@@ -22,7 +22,7 @@ const NavigationContainer = styled.nav`
 
   p:hover {
     transform: rotateY(180deg) scale(1.2);
-    color: #e0c251;
+    color: ${(props) => props.theme.color.c1};
   }
 `;
 
