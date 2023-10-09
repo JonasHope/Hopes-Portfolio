@@ -20,9 +20,6 @@ const ProjectCard = styled.div`
   width: fit-content;
   margin: 10px;
   perspective: 1000px;
-
-  &:hover {
-  }
 `;
 
 const CardHeader = styled.h3`

@@ -27,13 +27,15 @@ body {
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #231f20;
+  background-color: #1a1a2c;
+  /*background-color: #231f20;*/
   /*background-color: #070606; */
   color: #f2f2f2;
 }
 
 p {
   letter-spacing: 2px;
+  color: #c1c1d7;
 }
 
 code {

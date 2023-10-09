@@ -2,9 +2,9 @@ import { ThemeProvider } from "styled-components";
 
 const theme = {
   color: {
-    c1: "#E0C251",
-    c2: "#111111;",
-    c3: "#f2f2f2;",
+    c1: "#1a1a2c",
+    c2: "#f2f2f2;",
+    c3: "#c1c1d7;",
   },
   media: {
     mobile: `@media (max-width: 768px)`,
