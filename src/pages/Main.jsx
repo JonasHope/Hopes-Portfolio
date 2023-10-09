@@ -1,32 +1,23 @@
-import React, { useState, useEffect } from "react";
-import { Cursor } from "../components/cursor/CursorLight";
+import React from "react";
+import styled from "styled-components";
 import Header from "../components/sections/landing/Header";
+import CursorEffect from "../components/cursor/CursorLight";
+import AboutMe from "../components/sections/about/About";
+import ContentWidth from "../styles/ContentWidth";
+
+const Div = styled.div`
+  display: flex;
+`;
 
 function Main() {
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const updateCursorPosition = (e) => {
-      setCursorPosition({ x: e.clientX, y: e.clientY });
-    };
-
-    document.addEventListener("mousemove", updateCursorPosition);
-
-    return () => {
-      document.removeEventListener("mousemove", updateCursorPosition);
-    };
-  }, []);
-
   return (
-    <div>
-      <Cursor
-        style={{
-          left: cursorPosition.x + "px",
-          top: cursorPosition.y + "px",
-        }}
-      />
-      <Header />
-    </div>
+    <ContentWidth>
+      <Div>
+        <CursorEffect />
+        <Header />
+        <AboutMe />
+      </Div>
+    </ContentWidth>
   );
 }
 

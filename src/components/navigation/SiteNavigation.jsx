@@ -35,6 +35,10 @@ function Nav() {
 
   const handleNavItemClick = (navItem) => {
     setActiveNavItem(navItem);
+    const element = document.getElementById(navItem);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
