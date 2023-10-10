@@ -33,7 +33,7 @@ function AboutMe() {
             opportunities to expand my skill set and stay at the forefront of
             web development trends.
             <DownloadContainer>
-              <a href="#" download="#">
+              <a href={Resume} download="CV.pdf">
                 Download Resume
               </a>
             </DownloadContainer>

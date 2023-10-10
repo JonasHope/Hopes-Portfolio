@@ -167,7 +167,7 @@ function ProjectCards() {
     <StyleSheetManager
       shouldForwardProp={(prop) => !["imageUrl"].includes(prop)}
     >
-      <ProjectCardsContainer>
+      <ProjectCardsContainer id="work">
         {cardData.map((card, index) => (
           <ProjectCard key={index}>
             <ImageAndTextContainer>
