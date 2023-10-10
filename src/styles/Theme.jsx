@@ -2,9 +2,12 @@ import { ThemeProvider } from "styled-components";
 
 const theme = {
   color: {
-    c1: "#1a1a2c",
-    c2: "#f2f2f2;",
-    c3: "#c1c1d7;",
+    c1: "#0F1626",
+    c2: "#E9EEF2;",
+    c3: "#93A6BF;",
+    c4: "#59D9C1;",
+    c5: "#122B39",
+    c6: "#1f2941",
   },
   media: {
     mobile: `@media (max-width: 768px)`,
@@ -13,12 +16,14 @@ const theme = {
     desktopxl: `@media (min-width: 1221px)`,
   },
   fontsize: {
+    s08: "0.8rem;",
+    s09: "0.9rem;",
     s1: "1rem;",
+    s15: "1.5rem;",
     s2: "2rem;",
+    s25: "2.5rem;",
     s3: "3rem;",
     s4: "4rem;",
-    s15: "1.5rem;",
-    s25: "2.5;",
   },
   headersize: {
     h1: "4rem;",

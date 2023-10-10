@@ -1,25 +1,29 @@
 import React from "react";
 import styled from "styled-components";
+import Resume from "../../../resume/CV.pdf";
 
 const AbountContainer = styled.div`
-  padding-top: 40px;
+  padding: 40px 20px;
 `;
 
 const SiteContent = styled.div`
-  width: 50vw;
   padding: 20px;
-`;
-
-const Spacing = styled.div`
-  width: 50vw;
 `;
 
 const AboutContent = styled.p``;
 
+const DownloadContainer = styled.div`
+  margin: 10px 0;
+  padding: 10px 0;
+
+  a {
+    color: ${(props) => props.theme.color.c4};
+  }
+`;
+
 function AboutMe() {
   return (
     <>
-      <Spacing></Spacing>
       <SiteContent>
         <AbountContainer>
           <AboutContent id="about">
@@ -28,9 +32,13 @@ function AboutMe() {
             am driven by a thirst for knowledge, constantly seeking
             opportunities to expand my skill set and stay at the forefront of
             web development trends.
+            <DownloadContainer>
+              <a href="#" download="#">
+                Download Resume
+              </a>
+            </DownloadContainer>
           </AboutContent>
         </AbountContainer>
-        <div id="work"></div>
       </SiteContent>
     </>
   );

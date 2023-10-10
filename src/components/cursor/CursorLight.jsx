@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const Cursor = styled.div`
-  box-shadow: 0 0 400px 200px rgba(105, 117, 199, 30%);
+  box-shadow: 0 0 400px 200px rgba(1, 24, 187, 30%);
   border-radius: 50%;
   position: absolute;
   pointer-events: none;

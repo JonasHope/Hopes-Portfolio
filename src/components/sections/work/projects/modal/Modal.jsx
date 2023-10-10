@@ -39,11 +39,12 @@ const CloseButton = styled.span`
   background-color: ${(props) => props.theme.color.c3};
   color: ${(props) => props.theme.color.c2};
   border-radius: 5px;
+  line-height: 0;
 `;
 
 const Image = styled.img`
   width: -webkit-fill-available;
-  height: 80vh;
+  height: 75vh;
 `;
 
 function Modal({ showModal, imageUrl, closeModal }) {
