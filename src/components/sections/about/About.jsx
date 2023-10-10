@@ -10,15 +10,32 @@ const SiteContent = styled.div`
   padding: 20px;
 `;
 
-const AboutContent = styled.p``;
+const AboutContent = styled.div`
+  inline-height: 1px;
+  letter-spacing: 1px;
+`;
 
-const DownloadContainer = styled.div`
+const DownloadContainer = styled.p`
   margin: 10px 0;
   padding: 10px 0;
 
   a {
     color: ${(props) => props.theme.color.c4};
+    text-decoration: none;
+
+    &:hover {
+      .CornerArrow {
+        transform: translate(3px, -3px);
+      }
+    }
   }
+`;
+
+const CornerArrow = styled.span`
+  margin: 0 5px;
+  transition: transform 0.4s ease, margin 0.4s ease;
+  transform-origin: bottom right;
+  transform: translate(0px, 0px);
 `;
 
 function AboutMe() {
@@ -35,6 +52,7 @@ function AboutMe() {
             <DownloadContainer>
               <a href={Resume} download="CV.pdf">
                 Download Resume
+                <CornerArrow className="CornerArrow">&#8599;</CornerArrow>
               </a>
             </DownloadContainer>
           </AboutContent>
