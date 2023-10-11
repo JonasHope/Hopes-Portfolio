@@ -44,7 +44,6 @@ const CloseButton = styled.span`
 
 const Image = styled.img`
   width: -webkit-fill-available;
-  height: 75vh;
 `;
 
 function Modal({ showModal, imageUrl, closeModal }) {

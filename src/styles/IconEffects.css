@@ -1,0 +1,129 @@
+ul {
+  position: absolute;
+  bottom: 100px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+ul li {
+  list-style: none;
+}
+ul li a {
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: #93a6bf;
+  margin: 0 20px;
+  transition: 0.5s;
+}
+ul li a span {
+  position: absolute;
+  transition: transform 0.5s;
+}
+ul li a span:nth-child(1),
+ul li a span:nth-child(3) {
+  width: 100%;
+  height: 3px;
+  background: #93a6bf;
+}
+ul li a span:nth-child(1) {
+  top: 0;
+  left: 0;
+  transform-origin: right;
+}
+ul li a:hover span:nth-child(1) {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+ul li a span:nth-child(3) {
+  bottom: 0;
+  left: 0;
+  transform-origin: left;
+}
+ul li a:hover span:nth-child(3) {
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+
+ul li a span:nth-child(2),
+ul li a span:nth-child(4) {
+  width: 3px;
+  height: 100%;
+  background: #93a6bf;
+}
+ul li a span:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transform-origin: bottom;
+}
+ul li a:hover span:nth-child(2) {
+  transform: scale(1);
+  transform-origin: top;
+  transition: transform 0.5s;
+}
+ul li a span:nth-child(4) {
+  top: 0;
+  right: 0;
+  transform: scale(0);
+  transform-origin: top;
+}
+ul li a:hover span:nth-child(4) {
+  transform: scale(1);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+}
+
+.facebook:hover {
+  color: #3b5998;
+}
+.facebook:hover span {
+  background: #3b5998;
+}
+.instagram:hover {
+  color: #c32aa3;
+}
+.instagram:hover span {
+  background: #c32aa3;
+}
+.linkedin:hover {
+  color: #dd4b39;
+}
+.linkedin:hover span {
+  background: #dd4b39;
+}
+.github:hover {
+  color: #fefefe;
+}
+.github:hover span {
+  background: #fefefe;
+}
+ul li a .twitter {
+  color: #1da1f2;
+}
+ul li a:hover:nth-child(3) {
+  color: #c32aa3;
+}
+ul li a:hover:nth-child(4) {
+  color: #dd4b39;
+}
+
+/*credit Stockin*/
+
+@media (max-width: 992px) {
+  ul {
+    bottom: 50px;
+  }
+
+  ul li a {
+    margin: 12px;
+  }
+}

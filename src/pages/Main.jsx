@@ -5,14 +5,23 @@ import CursorEffect from "../components/cursor/CursorLight";
 import AboutMe from "../components/sections/about/About";
 import ContentWidth from "../styles/ContentWidth";
 import ProjectCards from "../components/sections/work/projects/ProjectCards";
+import ContactSection from "../components/sections/contact/ContactSection";
 
 const SiteContainer = styled.div`
   display: flex;
   justify-content: space-between;
+
+  ${(props) => props.theme.media.tablet} {
+    flex-direction: column;
+  }
 `;
 
 const ContentContainer = styled.div`
   width: 54%;
+
+  ${(props) => props.theme.media.tablet} {
+    width: 100%;
+  }
 `;
 
 const Space = styled.div`
@@ -28,6 +37,7 @@ function Main() {
         <ContentContainer>
           <AboutMe />
           <ProjectCards />
+          <ContactSection />
         </ContentContainer>
       </SiteContainer>
       <CursorEffect />

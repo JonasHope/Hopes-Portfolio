@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const NavContainer = styled.div``;
+const NavContainer = styled.div`
+  margin-top: 50px;
+`;
 
 const NavItem = styled.div`
   display: flex;

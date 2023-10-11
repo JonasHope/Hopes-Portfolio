@@ -29,6 +29,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #0f172a;
   color: #f2f2f2;
+  letter-spacing: 2px;
 }
 
 p {

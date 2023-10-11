@@ -11,7 +11,12 @@ const ProjectCardsContainer = styled.div`
   }
 `;
 
-const ProjectCard = styled.div`
+const ProjectCard = styled(Link)`
+  text-decoration: none;
+`;
+
+const ImageAndTextContainer = styled.div`
+  display: flex;
   padding: 20px;
   margin: 10px 0px;
   border-radius: 10px;
@@ -24,6 +29,10 @@ const ProjectCard = styled.div`
       color: ${(props) => props.theme.color.c4};
     }
   }
+
+  ${(props) => props.theme.media.mobile} {
+    flex-direction: column;
+  }
 `;
 
 const ImgAndLinkContainer = styled.div`
@@ -33,6 +42,7 @@ const ImgAndLinkContainer = styled.div`
 const CardHeader = styled.h3`
   font-size: ${(props) => props.theme.fontsize.s15};
   margin: 0;
+  color: ${(props) => props.theme.color.c2};
 `;
 
 const CardImg = styled.div`
@@ -87,11 +97,11 @@ const WebLink = styled(Link)`
   &:hover {
     color: ${(props) => props.theme.color.c4};
     border-bottom: 2px solid ${(props) => props.theme.color.c4};
-  }
-`;
 
-const ImageAndTextContainer = styled.div`
-  display: flex;
+    .CornerArrow {
+      transform: translate(3px, -3px);
+    }
+  }
 `;
 
 const TextContainer = styled.div`
@@ -102,10 +112,20 @@ const CornerArrowTop = styled.span`
   transition: transform 0.4s ease, margin 0.4s ease;
   transform-origin: bottom right;
   transform: translate(0px, 0px);
+  color: ${(props) => props.theme.color.c3};
+
+  ${(props) => props.theme.media.mobile} {
+    display: none;
+  }
 `;
 
 const CornerArrow = styled.span`
-  margin: 0 5px;
+  margin-left: 5px;
+  transition: transform 0.4s ease;
+  transform-origin: bottom right;
+  transform: translate(0px, 0px);
+  display: inline;
+  position: absolute;
 `;
 
 function ProjectCards() {
@@ -128,7 +148,7 @@ function ProjectCards() {
     >
       <ProjectCardsContainer id="work">
         {cardData.map((card, index) => (
-          <ProjectCard key={index}>
+          <ProjectCard to={card.siteLink} key={index}>
             <ImageAndTextContainer>
               <ImgAndLinkContainer>
                 <CardImg
