@@ -46,18 +46,21 @@ const ArrowContainer = styled.span`
 `;
 
 function ContactSection() {
+  const email = "Jonashope94@gmail.com";
+
+  const handleEmailClick = () => {
+    window.location.href = `mailto:${email}`;
+  };
   return (
-    <a href="mailto:Jonashope94@gmail.com">
-      <ContactContainer id="contact">
-        <ContactHeader>
-          <span>Contact me</span>
-          <IconHoverEffect>
-            <span>Jonashope94@gmail.com</span>
-            <ArrowContainer className="ArrowContainer">&#8599;</ArrowContainer>
-          </IconHoverEffect>
-        </ContactHeader>
-      </ContactContainer>
-    </a>
+    <ContactContainer onClick={handleEmailClick} id="contact">
+      <ContactHeader>
+        <span>Contact me</span>
+        <IconHoverEffect>
+          <span>{email}</span>
+          <ArrowContainer className="ArrowContainer">&#8599;</ArrowContainer>
+        </IconHoverEffect>
+      </ContactHeader>
+    </ContactContainer>
   );
 }
 
