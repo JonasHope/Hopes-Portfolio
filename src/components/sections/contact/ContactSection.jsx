@@ -47,15 +47,17 @@ const ArrowContainer = styled.span`
 
 function ContactSection() {
   return (
-    <ContactContainer id="contact">
-      <ContactHeader>
-        <span>Contact me </span>
-        <IconHoverEffect>
-          <span> Jonashope94@gmail.com</span>
-          <ArrowContainer className="ArrowContainer">&#8599;</ArrowContainer>
-        </IconHoverEffect>
-      </ContactHeader>
-    </ContactContainer>
+    <a href="mailto:Jonashope94@gmail.com">
+      <ContactContainer id="contact">
+        <ContactHeader>
+          <span>Contact me</span>
+          <IconHoverEffect>
+            <span>Jonashope94@gmail.com</span>
+            <ArrowContainer className="ArrowContainer">&#8599;</ArrowContainer>
+          </IconHoverEffect>
+        </ContactHeader>
+      </ContactContainer>
+    </a>
   );
 }
 
