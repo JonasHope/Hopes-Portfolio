@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
+import styled, { StyleSheetManager } from "styled-components";
 
 const NavContainer = styled.div`
   margin-top: 50px;
@@ -44,35 +44,39 @@ function Nav() {
   };
 
   return (
-    <NavContainer>
-      <NavItem
-        active={activeNavItem === "about"}
-        hovered={hoveredNavItem === "about"}
-        onClick={() => handleNavItemClick("about")}
-        onMouseEnter={() => setHoveredNavItem("about")}
-        onMouseLeave={() => setHoveredNavItem(null)}
-      >
-        About
-      </NavItem>
-      <NavItem
-        active={activeNavItem === "work"}
-        hovered={hoveredNavItem === "work"}
-        onClick={() => handleNavItemClick("work")}
-        onMouseEnter={() => setHoveredNavItem("work")}
-        onMouseLeave={() => setHoveredNavItem(null)}
-      >
-        Work
-      </NavItem>
-      <NavItem
-        active={activeNavItem === "contact"}
-        hovered={hoveredNavItem === "contact"}
-        onClick={() => handleNavItemClick("contact")}
-        onMouseEnter={() => setHoveredNavItem("contact")}
-        onMouseLeave={() => setHoveredNavItem(null)}
-      >
-        Contact
-      </NavItem>
-    </NavContainer>
+    <StyleSheetManager
+      shouldForwardProp={(prop) => !["active", "hovered"].includes(prop)}
+    >
+      <NavContainer>
+        <NavItem
+          active={activeNavItem === "about"}
+          hovered={hoveredNavItem === "about"}
+          onClick={() => handleNavItemClick("about")}
+          onMouseEnter={() => setHoveredNavItem("about")}
+          onMouseLeave={() => setHoveredNavItem(null)}
+        >
+          About
+        </NavItem>
+        <NavItem
+          active={activeNavItem === "work"}
+          hovered={hoveredNavItem === "work"}
+          onClick={() => handleNavItemClick("work")}
+          onMouseEnter={() => setHoveredNavItem("work")}
+          onMouseLeave={() => setHoveredNavItem(null)}
+        >
+          Work
+        </NavItem>
+        <NavItem
+          active={activeNavItem === "contact"}
+          hovered={hoveredNavItem === "contact"}
+          onClick={() => handleNavItemClick("contact")}
+          onMouseEnter={() => setHoveredNavItem("contact")}
+          onMouseLeave={() => setHoveredNavItem(null)}
+        >
+          Contact
+        </NavItem>
+      </NavContainer>
+    </StyleSheetManager>
   );
 }
 

@@ -11,16 +11,13 @@ const ProjectCardsContainer = styled.div`
   }
 `;
 
-const ProjectCard = styled(Link)`
-  text-decoration: none;
-`;
+const ProjectCard = styled.div``;
 
 const ImageAndTextContainer = styled.div`
   display: flex;
   padding: 20px;
   margin: 10px 0px;
   border-radius: 10px;
-  cursor: pointer;
 
   &:hover {
     background-color: ${(props) => props.theme.color.c6};
@@ -54,6 +51,7 @@ const CardImg = styled.div`
   background-size: cover;
   border-radius: 5px;
   border: 1px solid ${(props) => props.theme.color.c4};
+  cursor: pointer;
 `;
 
 const CardDescription = styled.p`
@@ -108,11 +106,12 @@ const TextContainer = styled.div`
   margin: 0 5px;
 `;
 
-const CornerArrowTop = styled.span`
+const CornerArrowTop = styled(Link)`
   transition: transform 0.4s ease, margin 0.4s ease;
   transform-origin: bottom right;
   transform: translate(0px, 0px);
   color: ${(props) => props.theme.color.c3};
+  text-decoration: none;
 
   ${(props) => props.theme.media.mobile} {
     display: none;
@@ -148,7 +147,7 @@ function ProjectCards() {
     >
       <ProjectCardsContainer id="work">
         {cardData.map((card, index) => (
-          <ProjectCard to={card.siteLink} key={index}>
+          <ProjectCard key={index}>
             <ImageAndTextContainer>
               <ImgAndLinkContainer>
                 <CardImg
@@ -184,7 +183,7 @@ function ProjectCards() {
                   ))}
                 </LanguageIcons>
               </TextContainer>
-              <CornerArrowTop className="CornerArrowTop">
+              <CornerArrowTop to={card.siteLink} className="CornerArrowTop">
                 &#8599;
               </CornerArrowTop>
             </ImageAndTextContainer>

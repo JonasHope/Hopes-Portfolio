@@ -18,12 +18,15 @@ const ModalContainer = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
-
   z-index: 1000;
-  max-width: 80%;
+  max-width: 70%;
   max-height: 80%;
   overflow: auto;
   border-radius: 5px;
+
+  ${(props) => props.theme.media.mobile} {
+    max-width: 90%;
+  }
 `;
 
 const CloseButton = styled.span`
@@ -44,6 +47,7 @@ const CloseButton = styled.span`
 
 const Image = styled.img`
   width: -webkit-fill-available;
+  height: ;
 `;
 
 function Modal({ showModal, imageUrl, closeModal }) {

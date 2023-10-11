@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const ContactContainer = styled.div`
-  font-size: ${(props) => props.theme.fontsize.s1};
+  font-size: ${(props) => props.theme.fontsize.s09};
   color: ${(props) => props.theme.color.c3};
   cursor: pointer;
   padding: 10px;
-  margin: 10px;
+  margin: 50px 10px;
   border-radius: 10px;
   background-color: ${(props) => props.theme.color.c6};
 `;

@@ -6,6 +6,7 @@ import AboutMe from "../components/sections/about/About";
 import ContentWidth from "../styles/ContentWidth";
 import ProjectCards from "../components/sections/work/projects/ProjectCards";
 import ContactSection from "../components/sections/contact/ContactSection";
+import ScrollToTop from "../components/scroll/BackToTop";
 
 const SiteContainer = styled.div`
   display: flex;
@@ -30,18 +31,21 @@ const Space = styled.div`
 
 function Main() {
   return (
-    <ContentWidth>
-      <SiteContainer>
-        <Header />
-        <Space></Space>
-        <ContentContainer>
-          <AboutMe />
-          <ProjectCards />
-          <ContactSection />
-        </ContentContainer>
-      </SiteContainer>
-      <CursorEffect />
-    </ContentWidth>
+    <>
+      <ScrollToTop />
+      <ContentWidth>
+        <SiteContainer>
+          <Header />
+          <Space></Space>
+          <ContentContainer>
+            <AboutMe />
+            <ProjectCards />
+            <ContactSection />
+          </ContentContainer>
+        </SiteContainer>
+        <CursorEffect />
+      </ContentWidth>
+    </>
   );
 }
 

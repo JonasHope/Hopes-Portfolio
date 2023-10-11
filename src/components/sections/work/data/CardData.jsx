@@ -46,7 +46,7 @@ const cardData = [
     imageUrl:
       "https://user-images.githubusercontent.com/95291501/194524816-e1816425-2ed3-4d5d-b94f-db5e64af31a8.png",
     altText: "CSM website",
-    languages: ["Html", "Css"],
+    languages: ["Html", "Css", "VScode"],
     description:
       "This website, built solely with HTML and CSS, represents a community science museum. It showcases exhibits and provides general information about the place. Designed with a playful, 'childish' theme to make it kid-friendly.",
     siteLink: "https://youthful-kepler-763b2a.netlify.app/",
