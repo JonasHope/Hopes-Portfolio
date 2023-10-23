@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Resume from "../../../resume/CV.pdf";
+import Resume from "../../../resume/CV-2023.pdf";
 
 const AbountContainer = styled.div`
   padding: 25px 10px;

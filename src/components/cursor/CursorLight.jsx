@@ -7,6 +7,10 @@ const Cursor = styled.div`
   position: absolute;
   pointer-events: none;
   transform: translate(-50%, -50%);
+
+  ${(props) => props.theme.media.tablet} {
+    box-shadow: none;
+  }
 `;
 
 function CursorEffect() {

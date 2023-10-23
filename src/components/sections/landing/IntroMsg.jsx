@@ -8,6 +8,10 @@ const IntroContent = styled.div`
 const Name = styled.h1`
   font-size: ${(props) => props.theme.headersize.h1};
   margin: 0px;
+
+  ${(props) => props.theme.media.mobile} {
+    font-size: ${(props) => props.theme.headersize.h2};
+  }
 `;
 
 const Dev = styled.h2`
